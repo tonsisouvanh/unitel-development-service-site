@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { RouterProvider } from "@tanstack/react-router";
+import router from "./router";
 
 function App() {
   return (
-    <div className="w-screen h-screen">
-      <div className="max-w-xl mx-auto w-full border">
-        <Button>Click me</Button>
-      </div>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
