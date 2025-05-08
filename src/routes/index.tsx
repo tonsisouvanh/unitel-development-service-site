@@ -4,10 +4,8 @@ import { HeroSection } from "@/components/section/hero-section";
 import { PortfolioSection } from "@/components/section/portfolio-section";
 import { ServicesSection } from "@/components/section/service-section";
 import { ServiceShowcase } from "@/components/section/service-showcase";
-import { TechnologiesSection } from "@/components/section/technologies-section";
 import { TestimonialsSection } from "@/components/section/testimonials-section";
 import { WorkProcessSection } from "@/components/section/work-process-section";
-import { Button } from "@/components/ui/button";
 import { ParticlesBackground } from "@/components/ui/particles-background";
 import { createFileRoute } from "@tanstack/react-router";
 

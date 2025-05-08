@@ -25,12 +25,6 @@ export function Footer() {
         </svg>
       </div>
 
-      {/* Decorative elements */}
-      {/* <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-gradient-to-br from-[#1E3A8A]/5 to-[#F97316]/5 dark:from-[#1E3A8A]/10 dark:to-[#F97316]/10"></div>
-      <div className="absolute bottom-1/4 left-10 w-80 h-80 rounded-full bg-gradient-to-tr from-[#F97316]/5 to-[#1E3A8A]/5 dark:from-[#F97316]/10 dark:to-[#1E3A8A]/10"></div>
-      <div className="absolute top-1/3 left-1/4 w-20 h-20 rounded-full bg-[#1E3A8A]/5 dark:bg-[#1E3A8A]/10"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-16 h-16 rounded-full bg-[#F97316]/5 dark:bg-[#F97316]/10"></div> */}
-
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <motion.div
@@ -49,35 +43,35 @@ export function Footer() {
             <div className="flex space-x-4">
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -90,7 +84,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-bold text-[#1E3A8A] dark:text-[#F5F5F5]">
+            <h3 className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
               Services
             </h3>
             <ul className="space-y-2">
@@ -98,7 +92,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#services"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Web Development
                 </Link>
@@ -107,7 +101,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#services"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Mobile Development
                 </Link>
@@ -116,7 +110,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#services"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Custom Software
                 </Link>
@@ -125,7 +119,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#services"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Cloud Solutions
                 </Link>
@@ -134,7 +128,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#services"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   UI/UX Design
                 </Link>
@@ -147,7 +141,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-bold text-[#1E3A8A] dark:text-[#F5F5F5]">
+            <h3 className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
               Company
             </h3>
             <ul className="space-y-2">
@@ -155,7 +149,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#about"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   About Us
                 </Link>
@@ -163,7 +157,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/blog"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Blog
                 </Link>
@@ -171,7 +165,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Careers
                 </Link>
@@ -179,7 +173,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Press
                 </Link>
@@ -188,7 +182,7 @@ export function Footer() {
                 <Link
                   to="/"
                   hash="#contact"
-                  className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
                 >
                   Contact
                 </Link>
@@ -201,7 +195,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-bold text-[#1E3A8A] dark:text-[#F5F5F5]">
+            <h3 className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
               Newsletter
             </h3>
             <p className="text-zinc-500 dark:text-zinc-400">
@@ -211,7 +205,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-3 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E3A8A] dark:border-zinc-700 dark:bg-gray-800 dark:text-white"
+                className="flex-1 px-3 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-color-2 dark:border-zinc-700 dark:bg-gray-800 dark:text-white"
                 required
               />
               <button
@@ -236,19 +230,19 @@ export function Footer() {
             <div className="flex gap-4">
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 Terms
               </Link>
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 Privacy
               </Link>
               <Link
                 to="/"
-                className="text-zinc-500 hover:text-[#1E3A8A] transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
+                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
                 Cookies
               </Link>

@@ -69,7 +69,7 @@ export function TypewriterEffect({
     <span className={className}>
       {currentText}
       <span
-        className={`inline-block w-1 ml-1 bg-color-1 ${isBlinking ? "animate-blink" : ""}`}
+        className={`inline-block w-1 ml-1 bg-white ${isBlinking ? "animate-caret-blink" : ""}`}
       >
         &nbsp;
       </span>

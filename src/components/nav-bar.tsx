@@ -33,12 +33,11 @@ export function Navbar() {
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/#contact" },
   ];
-  console.log(isScrolled);
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      // initial={{ y: -100 }}
+      // animate={{ y: 0 }}
+      // transition={{ duration: 0.5 }}
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
           ? "bg-color-1/80 backdrop-blur-md shadow-md dark:bg-gray-900/80"
@@ -48,9 +47,9 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            // initial={{ opacity: 0, scale: 0.8 }}
+            // animate={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 0.5 }}
             className="w-[50px] h-[50px]"
           >
             <img
@@ -66,9 +65,9 @@ export function Navbar() {
             return (
               <motion.div
                 key={link.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                // initial={{ opacity: 0, y: -20 }}
+                // animate={{ opacity: 1, y: 0 }}
+                // transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <Link
                   to={to}
@@ -103,9 +102,9 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
-            <X className="h-6 w-6 text-color-2 dark:text-white" />
+            <X className="h-6 w-6 text-white" />
           ) : (
-            <Menu className="h-6 w-6 text-color-2 dark:text-white" />
+            <Menu className="h-6 w-6 text-white" />
           )}
         </button>
       </div>
