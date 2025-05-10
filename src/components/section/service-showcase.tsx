@@ -1,14 +1,15 @@
-import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, ChevronRight } from "lucide-react";
+import { services } from "@/const";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { useAnimation } from "@/lib/provider/animation-provider";
 import { Link } from "@tanstack/react-router";
-import { services } from "@/const";
+import { CheckCircle, ChevronRight } from "lucide-react";
+import { motion } from "motion/react";
 
 export function ServiceShowcase() {
   const { ref, inView } = useAnimation("service-showcase");
-
+  const isMobile = useIsMobile();
   return (
     <section
       ref={ref}
@@ -38,9 +39,11 @@ export function ServiceShowcase() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex justify-center mb-12"
+            className={`${isMobile ? "relative rounded-sm overflow-x-auto h-10 bg-muted" : "flex justify-center"}`}
           >
-            <TabsList className="bg-gray-100 dark:bg-gray-800 p-1 rounded-full">
+            <TabsList
+              className={`${isMobile ? "absolute flex flex-row justify-stretch w-full" : "bg-gray-100 dark:bg-gray-800 p-1 rounded-full"}`}
+            >
               {services.map((service) => (
                 <TabsTrigger
                   key={service.id}
