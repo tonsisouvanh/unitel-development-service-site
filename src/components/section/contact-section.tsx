@@ -46,19 +46,19 @@ export function ContactSection() {
 
   const contactInfo = [
     {
-      icon: <Mail className="h-6 w-6 text-[#F97316]" />,
+      icon: <Mail className="h-6 w-6 text-white" />,
       title: "Email",
       details: "info@technova.com",
       link: "mailto:info@technova.com",
     },
     {
-      icon: <Phone className="h-6 w-6 text-[#F97316]" />,
+      icon: <Phone className="h-6 w-6 text-white" />,
       title: "Phone",
       details: "+1 (555) 123-4567",
       link: "tel:+15551234567",
     },
     {
-      icon: <MapPin className="h-6 w-6 text-[#F97316]" />,
+      icon: <MapPin className="h-6 w-6 text-white" />,
       title: "Office",
       details: "123 Innovation Street, Tech City, TC 12345",
       link: "https://maps.google.com",
@@ -69,9 +69,9 @@ export function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className="w-full py-12 md:py-24 lg:py-32 bg-color-2 relative overflow-hidden"
+      className="w-full py-12 md:py-24 lg:py-32 bg-no-repeat bg-cover relative overflow-hidden bg-[url(/assets/images/contact-bg.jpg)]"
     >
-      <div className="absolute inset-0 opacity-10 code-pattern"></div>
+      <div className="absolute inset-0 bg-color-2/40"></div>
       <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export function ContactSection() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 space-y-6">
+            <div className="bg-color-1/65 backdrop-blur-sm rounded-lg p-6 space-y-6">
               {contactInfo.map((item, index) => (
                 <motion.a
                   key={index}
@@ -128,7 +128,7 @@ export function ContactSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+              className="bg-color-1/65 backdrop-blur-sm rounded-lg p-6"
             >
               <h3 className="text-xl font-bold text-[#F5F5F5] mb-4">
                 Our Office Hours
@@ -154,7 +154,7 @@ export function ContactSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
-            className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+            className="bg-color-1/65 backdrop-blur-sm rounded-lg p-6"
           >
             <h3 className="text-xl font-bold text-[#F5F5F5] mb-6">
               Send Us a Message
@@ -235,7 +235,7 @@ export function ContactSection() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-[#F97316] text-white hover:bg-[#F97316]/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#F97316]/20"
+                  className="w-full bg-white text-color-2 hover:bg-white/70 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-color-1/20"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (

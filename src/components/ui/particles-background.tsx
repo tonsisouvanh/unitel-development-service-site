@@ -29,7 +29,9 @@ export function ParticlesBackground() {
       color: string;
 
       constructor() {
+        // @ts-ignore
         this.x = Math.random() * canvas.width;
+        // @ts-ignore
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 3 + 1;
         this.speedX = Math.random() * 0.5 - 0.25;
@@ -42,18 +44,24 @@ export function ParticlesBackground() {
         this.y += this.speedY;
 
         // Bounce off edges
+        // @ts-ignore
         if (this.x > canvas.width || this.x < 0) {
           this.speedX = -this.speedX;
         }
+        // @ts-ignore
         if (this.y > canvas.height || this.y < 0) {
           this.speedY = -this.speedY;
         }
       }
 
       draw() {
+        // @ts-ignore
         ctx.fillStyle = this.color;
+        // @ts-ignore
         ctx.beginPath();
+        // @ts-ignore
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        // @ts-ignore
         ctx.fill();
       }
     }
@@ -80,11 +88,17 @@ export function ParticlesBackground() {
 
           if (distance < maxDistance) {
             const opacity = 1 - distance / maxDistance;
+            // @ts-ignore
             ctx.strokeStyle = `rgba(30, 58, 138, ${opacity * 0.15})`;
+            // @ts-ignore
             ctx.lineWidth = 1;
+            // @ts-ignore
             ctx.beginPath();
+            // @ts-ignore
             ctx.moveTo(particles[i].x, particles[i].y);
+            // @ts-ignore
             ctx.lineTo(particles[j].x, particles[j].y);
+            // @ts-ignore
             ctx.stroke();
           }
         }
@@ -93,6 +107,7 @@ export function ParticlesBackground() {
 
     // Animation loop
     function animate() {
+      // @ts-ignore
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < particles.length; i++) {

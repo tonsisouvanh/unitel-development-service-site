@@ -29,7 +29,7 @@ export function WorkProcessSection() {
       icon: <ClipboardList className="h-10 w-10 text-[#F97316]" />,
       title: "Design",
       description:
-        "We create wireframes and designs that align with your brand and provide optimal user experience.",
+        "We create wire-frames and designs that align with your brand and provide optimal user experience.",
     },
     {
       icon: <Code className="h-10 w-10 text-[#F97316]" />,
@@ -65,7 +65,7 @@ export function WorkProcessSection() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-color-2/10 px-3 py-1 text-sm text-color-2 dark:bg-color-2/20 dark:text-[#F5F5F5]">
+          <div className="inline-block rounded-lg bg-color-1/10 px-3 py-1 text-sm text-color-1 dark:bg-color-1/20 dark:text-[#F5F5F5]">
             Our Process
           </div>
           <h2 className="text-3xl font-bold tracking-tighter text-color-2 sm:text-5xl dark:text-[#F5F5F5]">
@@ -94,7 +94,7 @@ export function WorkProcessSection() {
               >
                 <div className="flex-1">
                   <div
-                    className={`bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover ${
+                    className={`border-2 border-color-1 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md card-hover ${
                       index % 2 === 0 ? "md:text-right" : "md:text-left"
                     }`}
                   >
@@ -108,10 +108,10 @@ export function WorkProcessSection() {
                 </div>
                 <div className="md:w-16 flex justify-center">
                   <div className="relative">
-                    <div className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-lg z-10 relative">
+                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-lg z-10 relative">
                       {step.icon}
                     </div>
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-color-2 to-[#F97316] blur-md opacity-30"></div>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-color-1 to-[#F97316] blur-md opacity-30"></div>
                   </div>
                 </div>
                 <div className="flex-1 md:block hidden"></div>

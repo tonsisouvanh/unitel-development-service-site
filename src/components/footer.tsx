@@ -1,14 +1,22 @@
-"use client";
-
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Facebook, Youtube } from "lucide-react";
+import ServicesList from "./services-list";
+import TermsList from "./term-list";
+import PressList from "./press-list";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="w-full relative bg-[#F5F5F5] dark:bg-gray-900 pt-16 overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-72 opacity-10 h-auto">
+        <img
+          src="/assets/images/logo-no-text.png"
+          className="object-cover w-full h-full"
+          alt=""
+        />
+      </div>
       {/* Wave SVG at the top */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none transform translate-y-[-1px]">
         <svg
@@ -34,188 +42,35 @@ export function Footer() {
             className="space-y-4"
           >
             <Link to="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold gradient-text">Unitel</span>
+              <img
+                src="/assets/images/logo-full.jpg"
+                className="w-auto h-24"
+                alt=""
+              />
             </Link>
-            <p className="text-zinc-500 dark:text-zinc-400">
-              Building innovative software solutions that transform businesses
-              and drive growth.
-            </p>
             <div className="flex space-x-4">
-              <Link
-                to="/"
+              <a
+                href="https://web.facebook.com/Unitel.la"
+                target="_blank"
                 className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="text-color-1" />
                 <span className="sr-only">Facebook</span>
-              </Link>
-              <Link
-                to="/"
+              </a>
+              <a
+                href="https://www.youtube.com/@unitellao8744"
+                target="_blank"
                 className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
               >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                to="/"
-                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link
-                to="/"
-                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link
-                to="/"
-                className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
+                <Youtube className="text-color-1" />
+                <span className="sr-only">Youtube</span>
+              </a>
             </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-4"
-          >
-            <h3 className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
-              Services
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  hash="#services"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  hash="#services"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  hash="#services"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Custom Software
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  hash="#services"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  hash="#services"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  UI/UX Design
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-4"
-          >
-            <h3 className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
-              Company
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  hash="#about"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Press
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  hash="#contact"
-                  className="text-zinc-500 hover:text-color-2 transition-colors duration-200 dark:text-zinc-400 dark:hover:text-[#F5F5F5]"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="space-y-4"
-          >
-            <h3 className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
-              Newsletter
-            </h3>
-            <p className="text-zinc-500 dark:text-zinc-400">
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-3 py-2 border border-zinc-300 rounded-md focus:outline-none focus:ring-2 focus:ring-color-2 dark:border-zinc-700 dark:bg-gray-800 dark:text-white"
-                required
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-[#F97316] text-white rounded-md hover:bg-[#F97316]/90 transition-colors duration-200"
-              >
-                Subscribe
-              </button>
-            </form>
-          </motion.div>
+
+          <ServicesList />
+          <TermsList />
+          <PressList />
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

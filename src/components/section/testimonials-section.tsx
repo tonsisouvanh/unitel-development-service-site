@@ -49,8 +49,15 @@ export function TestimonialsSection() {
     <section
       id="testimonials"
       ref={ref}
-      className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden"
+      className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden "
     >
+      <div className="absolute w-full h-full inset-0 opacity-20">
+        <img
+          src="/assets/images/react-light.png"
+          alt=""
+          className="w-full h-full object-fill"
+        />
+      </div>
       <div className="absolute inset-0 opacity-5 code-pattern"></div>
       <div className="container px-4 md:px-6 relative z-10">
         <motion.div
@@ -59,7 +66,7 @@ export function TestimonialsSection() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-lg bg-color-2/10 px-3 py-1 text-sm text-color-2 dark:bg-color-2/20 dark:text-[#F5F5F5]">
+          <div className="inline-block rounded-lg bg-color-1/10 px-3 py-1 text-sm text-color-1 dark:bg-color-1/20 dark:text-[#F5F5F5]">
             Testimonials
           </div>
           <h2 className="text-3xl font-bold tracking-tighter text-color-2 sm:text-5xl dark:text-[#F5F5F5]">
@@ -80,14 +87,14 @@ export function TestimonialsSection() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto"
           >
-            <Card className="border-0 shadow-lg bg-white/80 backdrop-blur-sm dark:bg-gray-800/80">
+            <Card className="shadow-lg border border-color-1/50 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80">
               <CardContent className="p-8">
-                <Quote className="h-12 w-12 text-[#F97316] mb-4 opacity-50" />
+                <Quote className="h-12 w-12 text-color-1 mb-4 opacity-50" />
                 <p className="text-xl md:text-2xl text-zinc-700 mb-6 italic dark:text-zinc-300">
                   "{testimonials[activeIndex].quote}"
                 </p>
                 <div className="flex items-center">
-                  <div className="rounded-full bg-gradient-to-r from-color-2 to-[#F97316] p-1 mr-4">
+                  <div className="rounded-full bg-gradient-to-r from-color-2 to-color-1 p-1 mr-4">
                     <div className="h-12 w-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
                       <span className="text-lg font-bold text-color-2 dark:text-[#F5F5F5]">
                         {testimonials[activeIndex].author.charAt(0)}
@@ -114,7 +121,7 @@ export function TestimonialsSection() {
                 onClick={() => handleDotClick(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   activeIndex === index
-                    ? "bg-[#F97316] w-6"
+                    ? "bg-color-1 w-6"
                     : "bg-color-2/20 hover:bg-color-2/40 dark:bg-[#F5F5F5]/20 dark:hover:bg-[#F5F5F5]/40"
                 }`}
                 aria-label={`View testimonial ${index + 1}`}

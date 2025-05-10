@@ -1,9 +1,16 @@
-import { motion } from "motion/react";
-import { Code, Database, Globe, Layers, Smartphone, Zap } from "lucide-react";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAnimation } from "@/lib/provider/animation-provider";
 import { Link } from "@tanstack/react-router";
+import {
+  BookOpen,
+  Code,
+  ShieldCheck,
+  Server,
+  TrendingUp,
+  CheckCircle2,
+} from "lucide-react";
+import { motion } from "motion/react";
+import { useState } from "react";
 
 export function ServicesSection() {
   const { ref, inView } = useAnimation("services");
@@ -11,8 +18,8 @@ export function ServicesSection() {
 
   const services = [
     {
-      icon: <Globe className="h-10 w-10 text-white" />,
-      title: "Web Development",
+      icon: <Code className="h-10 w-10 text-white" />,
+      title: "Software Development",
       description:
         "Custom websites and web applications built with modern technologies.",
       details: [
@@ -25,72 +32,87 @@ export function ServicesSection() {
       bgColor: "from-blue-600 to-blue-800",
     },
     {
-      icon: <Smartphone className="h-10 w-10 text-white" />,
-      title: "Mobile Development",
+      icon: <ShieldCheck className="h-10 w-10 text-white" />,
+      title: "Network Security",
       description:
-        "Native and cross-platform mobile applications for iOS and Android.",
+        "We provide comprehensive network security solutions to protect your digital assets and ensure business continuity.",
       details: [
-        "iOS and Android native apps",
-        "Cross-platform development",
-        "Mobile UI/UX design",
-        "App store optimization",
-        "Mobile app maintenance",
+        "Firewall management",
+        "Intrusion detection and prevention",
+        "Vulnerability assessments",
+        "Penetration testing",
+        "Security audits",
+        "VPN and secure remote access",
+        "Network segmentation",
+        "Security awareness training",
       ],
       bgColor: "from-orange-500 to-orange-700",
     },
     {
-      icon: <Code className="h-10 w-10 text-white" />,
-      title: "Custom Software",
+      icon: <Server className="h-10 w-10 text-white" />,
+      title: "Digital Infrastructure Service",
       description:
-        "Bespoke software solutions designed to solve your specific business challenges.",
+        "We build and manage robust digital foundations that empower your business operations and drive innovation.",
       details: [
-        "Enterprise software development",
-        "Legacy system modernization",
-        "Process automation",
-        "Custom CRM and ERP systems",
-        "Industry-specific solutions",
+        "Cloud infrastructure setup and management (AWS, Azure, GCP)",
+        "Server infrastructure design and maintenance (on-premise, hybrid)",
+        "Network design and implementation",
+        "Data storage and management solutions",
+        "Disaster recovery and business continuity planning",
+        "IT infrastructure monitoring and support",
+        "Automation and orchestration of IT processes",
+        "Scalability and performance optimization",
       ],
       bgColor: "from-purple-600 to-purple-800",
     },
     {
-      icon: <Database className="h-10 w-10 text-white" />,
-      title: "Cloud Solutions",
+      icon: <TrendingUp className="h-10 w-10 text-white" />,
+      title: "Digital Transformation Service",
       description:
-        "Scalable cloud infrastructure and services for your growing business needs.",
+        "We guide your organization through strategic changes, leveraging technology to enhance processes, customer experiences, and business models.",
       details: [
-        "Cloud migration strategies",
-        "AWS, Azure, and GCP solutions",
-        "Serverless architecture",
-        "Cloud-native applications",
-        "DevOps and CI/CD pipelines",
+        "Digital strategy development and roadmap creation",
+        "Business process automation and optimization",
+        "Customer experience (CX) design and implementation",
+        "Data analytics and insights for decision-making",
+        "Cloud adoption and migration strategies",
+        "Enterprise resource planning (ERP) system implementation",
+        "Change management and user adoption programs",
+        "Innovation workshops and technology scouting",
       ],
       bgColor: "from-cyan-500 to-cyan-700",
     },
     {
-      icon: <Zap className="h-10 w-10 text-white" />,
-      title: "DevOps",
+      icon: <CheckCircle2 className="h-10 w-10 text-white" />,
+      title: "Fraud Prevention Reconciliation",
       description:
-        "Streamline your development and operations with our DevOps services.",
+        "We ensure the accuracy and integrity of your fraud prevention efforts through meticulous reconciliation and analysis.",
       details: [
-        "CI/CD implementation",
-        "Infrastructure as Code",
-        "Containerization with Docker",
-        "Kubernetes orchestration",
-        "Monitoring and logging solutions",
+        "Transaction monitoring system reconciliation",
+        "False positive analysis and reduction",
+        "Chargeback and dispute reconciliation",
+        "Data integrity checks across fraud prevention platforms",
+        "Identification and resolution of reconciliation discrepancies",
+        "Reporting and analysis of reconciliation outcomes",
+        "Process improvement for reconciliation efficiency",
+        "Customized reconciliation strategies based on your systems",
       ],
       bgColor: "from-green-600 to-green-800",
     },
     {
-      icon: <Layers className="h-10 w-10 text-white" />,
-      title: "UI/UX Design",
+      icon: <BookOpen className="h-10 w-10 text-white" />,
+      title: "IT Training Consulting",
       description:
-        "User-centered design that creates intuitive and engaging digital experiences.",
+        "We provide expert guidance to develop and implement effective IT training programs that empower your workforce and enhance organizational capabilities.",
       details: [
-        "User research and personas",
-        "Wireframing and prototyping",
-        "Visual design and branding",
-        "Usability testing",
-        "Design systems creation",
+        "Needs assessment and skills gap analysis",
+        "Custom curriculum development for various IT domains",
+        "Training program design and delivery strategy",
+        "Selection and implementation of learning management systems (LMS)",
+        "Development of training materials (e-learning, workshops, documentation)",
+        "Train-the-trainer programs",
+        "Evaluation and measurement of training effectiveness",
+        "Ongoing support and program refinement",
       ],
       bgColor: "from-pink-500 to-pink-700",
     },
@@ -104,8 +126,13 @@ export function ServicesSection() {
     <section
       id="services"
       ref={ref}
-      className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950"
+      className="w-full relative py-12 md:py-24 lg:py-32 px-3 bg-white"
     >
+      <img
+        className="absolute top-0 right-0 w-full h-full object-cover opacity-20"
+        src="/assets/images/polygon.png"
+        alt=""
+      />
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,7 +140,7 @@ export function ServicesSection() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
         >
-          <div className="inline-block rounded-full bg-color-2/10 px-4 py-1.5 text-sm font-medium text-color-2 dark:bg-color-2/20 dark:text-[#F5F5F5]">
+          <div className="inline-block rounded-full bg-color-1/10 px-4 py-1.5 text-sm font-medium text-color-1 dark:bg-color-1/20 dark:text-[#F5F5F5]">
             Our Services
           </div>
           <h2 className="text-4xl font-bold tracking-tight text-color-2 sm:text-5xl dark:text-[#F5F5F5]">
@@ -208,7 +235,7 @@ export function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex justify-center mt-16"
+          className="flexd justify-center mt-16 hidden"
         >
           <Link to="/" hash="contact">
             <Button className="bg-color-2 text-white hover:bg-color-2/90 transition-all duration-300 shadow-lg hover:shadow-xl px-8 py-6 text-lg rounded-full">

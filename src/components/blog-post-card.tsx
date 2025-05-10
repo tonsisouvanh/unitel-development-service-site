@@ -22,18 +22,18 @@ interface BlogPostCardProps {
 export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
   return (
     <Card
-      className={`overflow-hidden border-0 shadow-lg ${featured ? "lg:flex" : ""}`}
+      className={`overflow-hidden py-0 border-0 shadow-lg ${featured ? "lg:flex" : ""}`}
     >
       <div className={`relative ${featured ? "lg:w-1/2" : ""}`}>
         <div className="relative h-60 w-full overflow-hidden">
           <img
-            src={post.image || "/placeholder.svg"}
+            src={"/assets/images/blog-card-placeholder.jpg"}
             alt={post.title}
             className="object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
         <Badge
-          className="absolute left-4 top-4 bg-[#F97316] hover:bg-[#F97316]/90"
+          className="absolute text-white left-4 top-4 bg-color-1 hover:bg-color-1/90"
           variant="secondary"
         >
           {post.category}
@@ -43,19 +43,19 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
         <CardContent className="p-6">
           <div className="flex items-center gap-4 text-sm text-zinc-500 mb-3">
             <div className="flex items-center gap-1">
-              <CalendarDays className="h-4 w-4 text-[#F97316]" />
+              <CalendarDays className="h-4 w-4 text-color-1" />
               <span>{post.date}</span>
             </div>
             <div className="flex items-center gap-1">
-              <User className="h-4 w-4 text-[#F97316]" />
+              <User className="h-4 w-4 text-color-1" />
               <span>{post.author}</span>
             </div>
             <div className="flex items-center gap-1">
-              <MessageSquare className="h-4 w-4 text-[#F97316]" />
+              <MessageSquare className="h-4 w-4 text-color-1" />
               <span>{post.comments}</span>
             </div>
           </div>
-          <h3 className="text-xl font-bold text-[#1E3A8A] mb-2 line-clamp-2 hover:text-[#F97316] transition-colors duration-200">
+          <h3 className="text-xl font-bold text-color-2 mb-2 line-clamp-2 hover:text-color-1 transition-colors duration-200">
             <Link to="/blog/$blogId" params={{ blogId: post.id }}>
               {post.title}
             </Link>
@@ -67,7 +67,7 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
           <Link to="/blog/$blogId" params={{ blogId: post.id }}>
             <Button
               variant="outline"
-              className="border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#1E3A8A] hover:text-white"
+              className="border-color-2 text-color-2 hover:bg-color-2 hover:text-white"
             >
               Read More <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
