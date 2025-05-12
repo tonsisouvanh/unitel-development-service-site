@@ -66,6 +66,7 @@ export function AboutSection() {
 
         {/* Core Values */}
         <CoreValue className="hidden" inView={inView} />
+
         {/* Company History */}
         <CompanyHistory className="hidden" inView={inView} />
 

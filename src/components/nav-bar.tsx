@@ -45,7 +45,7 @@ export function Navbar() {
       }`}
     >
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" hash="hero" className="flex items-center gap-2">
           <motion.div className="w-[50px] h-[50px]">
             <img
               src="/assets/images/logo-white-bg.png"
@@ -77,11 +77,11 @@ export function Navbar() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex gap-4">
+        <Link to="/" hash="contact" className="hidden md:flex gap-4">
           <Button className="bg-white text-color-2 hover:bg-white/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-color-1/20">
             Get Started
           </Button>
-        </div>
+        </Link>
 
         {/* Mobile Menu Toggle */}
         <button

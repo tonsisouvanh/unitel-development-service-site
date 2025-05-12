@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const ProjectCard = ({ className, project, index, inView }: Props) => {
+  const navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -45,6 +47,12 @@ const ProjectCard = ({ className, project, index, inView }: Props) => {
             ))}
           </div>
           <Button
+            onClick={() =>
+              navigate({
+                to: `/projects/$projectId`,
+                params: { projectId: "project-slug" },
+              })
+            }
             variant="outline"
             className="w-full bg-color-1 text-white hover:bg-color-1/70 hover:text-white transition-all duration-300 dark:border-[#F5F5F5] dark:text-[#F5F5F5] dark:hover:bg-[#F5F5F5] dark:hover:text-color-1"
           >

@@ -46,22 +46,24 @@ const CompanyOverview = ({ className, inView }: Props) => {
               leading software development company with a global presence. Our
               journey has been driven by a passion for technology and a
               commitment to delivering exceptional value to our clients. */}
-          Cillum tempor anim non eiusmod do magna deserunt ut mollit esse
-          cupidatat do. Et ex aliquip id cillum occaecat in proident cupidatat.
-          Ullamco cupidatat duis do enim esse pariatur veniam ullamco eiusmod
-          aute esse quis anim.
+          Over the past 11 years, under the brand name "Unitel", Star Telecom
+          Company Limited has grown rapidly and developed leapfrog from the
+          smallest network in Laos to the number one network in providing
+          services to society by providing comprehensive telecommunications
+          services, with 3G; 4G; 4.5G mobile internet networks covering 100% of
+          all provinces nationwide, the largest and most extensive mobile signal
+          transmission infrastructure, including more than 9,000 base stations,
+          a 30,000 km fiber optic cable transmission system covering remote
+          areas, and providing modern technology services in all areas, which is
+          an important contribution to the digital transformation of the Lao
+          PDR.
         </p>
-        <p className="text-zinc-500 text-lg dark:text-zinc-400">
+        <p className="text-zinc-500 hidden text-lg dark:text-zinc-400">
           {/* Today, we are a team of 50+ talented professionals working
               together to create innovative solutions that help businesses
               thrive in the digital age. Our expertise spans across various
               technologies and industries, allowing us to tackle complex
               challenges and deliver results that exceed expectations. */}
-          Esse sit esse cillum ullamco aliqua dolor in laboris quis. Dolore aute
-          tempor dolor commodo do dolor et ea Lorem ullamco tempor aute
-          exercitation laborum. Eu incididunt tempor duis excepteur quis dolore
-          minim. Cillum occaecat fugiat culpa fugiat ex enim ea sit est dolore
-          laboris.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
