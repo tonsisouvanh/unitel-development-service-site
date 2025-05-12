@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAnimation } from "@/lib/provider/animation-provider";
 import { motion } from "motion/react";
-import ProjectCard from "./project-card";
+import ProjectCard from "../project/project-card";
 
 export function PortfolioSection() {
   const { ref, inView } = useAnimation("portfolio");

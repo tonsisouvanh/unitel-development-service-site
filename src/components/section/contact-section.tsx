@@ -54,14 +54,15 @@ export function ContactSection() {
     {
       icon: <Phone className="h-6 w-6 text-white" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      details: "021 999 666",
+      link: "tel:+021999666",
     },
     {
       icon: <MapPin className="h-6 w-6 text-white" />,
       title: "Office",
-      details: "123 Innovation Street, Tech City, TC 12345",
-      link: "https://maps.google.com",
+      details:
+        "Nongbone Road, Phonxay Village, Saysettha District, Vientiane Capital, Laos",
+      link: "https://maps.app.goo.gl/D49pJLot3z9YW6on8",
     },
   ];
 
